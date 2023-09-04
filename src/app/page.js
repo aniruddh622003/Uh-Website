@@ -4,9 +4,5 @@ import { Button } from "@mui/material";
 import HeadBar from "@/components/HeadBar";
 
 export default function Home() {
-  return (
-    <div>
-      <HeadBar />
-    </div>
-  );
+  return <div>test</div>;
 }
