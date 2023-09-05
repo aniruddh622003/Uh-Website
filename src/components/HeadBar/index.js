@@ -1,20 +1,34 @@
+"use client";
 import {
   AppBar,
   Box,
+  Button,
   Container,
   List,
   ListItem,
   ListItemButton,
   ListItemText,
+  Menu,
+  MenuItem,
   Toolbar,
   Typography,
 } from "@mui/material";
 import { GiHospitalCross } from "react-icons/gi";
 import React from "react";
-import { headlinks } from "@/nav.config";
+import { headlinks, navlinks } from "@/config/nav.config";
 import Link from "next/link";
 
 const HeadBar = () => {
+  const [deptMenu, setDeptMenu] = React.useState(null);
+
+  const handleDeptMenuOpen = (event) => {
+    setDeptMenu(event.currentTarget);
+  };
+
+  const handleDeptMenuClose = () => {
+    setDeptMenu(null);
+  };
+
   return (
     <div>
       <AppBar position="fixed">
@@ -70,12 +84,66 @@ const HeadBar = () => {
                   ))}
                 </List>
               </Toolbar>
-              <Toolbar>
-                <GiHospitalCross
-                  style={{ fontSize: "2rem", marginRight: "1rem" }}
-                />
-                <Typography variant="h5">Upadhyay Hospital</Typography>
-              </Toolbar>
+              <Box
+                sx={{
+                  display: {
+                    xs: "none",
+                    md: "flex",
+                  },
+                  padding: "1rem",
+                  justifyContent: "space-between",
+                }}
+              >
+                <Box sx={{ display: "flex" }}>
+                  <GiHospitalCross
+                    style={{ fontSize: "2rem", marginRight: "1rem" }}
+                  />
+                  <Typography variant="h5">Upadhyay Hospital</Typography>
+                </Box>
+                <Box sx={{ display: "flex" }}>
+                  {navlinks.map((link) => (
+                    <React.Fragment key={link.name}>
+                      <Button
+                        color="white"
+                        href={link.href != "" ? link.href : null}
+                        onClick={(e) => {
+                          if (link.name == "Departments") {
+                            handleDeptMenuOpen(e);
+                          }
+                        }}
+                      >
+                        {link.name}
+                      </Button>
+                      {link.submenu && (
+                        <Menu
+                          anchorEl={deptMenu}
+                          open={Boolean(deptMenu)}
+                          onClose={handleDeptMenuClose}
+                          anchorOrigin={{
+                            vertical: "bottom",
+                            horizontal: "right",
+                          }}
+                          transformOrigin={{
+                            vertical: "top",
+                            horizontal: "right",
+                          }}
+                          keepMounted
+                        >
+                          {link.submenu.map((sublink) => (
+                            <Link key={sublink.name} href={sublink.href}>
+                              <MenuItem>
+                                <Typography variant="body1" color="primary">
+                                  {sublink.name}
+                                </Typography>
+                              </MenuItem>
+                            </Link>
+                          ))}
+                        </Menu>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </Box>
+              </Box>
             </Box>
           </Toolbar>
         </Container>

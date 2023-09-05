@@ -15,6 +15,10 @@ const theme = createTheme({
       main: "#3a853d",
       contrastThreshold: 1,
     },
+    white: {
+      main: "#fff",
+      contrastText: "#3a853d",
+    },
   },
   typography: {
     fontFamily: roboto.style.fontFamily,
