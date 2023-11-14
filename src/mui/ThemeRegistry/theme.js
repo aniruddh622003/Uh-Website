@@ -1,23 +1,25 @@
-import { Roboto } from "next/font/google";
 import { createTheme } from "@mui/material/styles";
-
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      // Greenish colors for hospital
       main: "#3a853d",
-      contrastThreshold: 1,
+      light: "#81d484",
+      dark: "#005700",
+      contrastText: "#fff",
     },
-  },
-  typography: {
-    fontFamily: roboto.style.fontFamily,
+    secondary: {
+      main: "#1f2937",
+      light: "#60a5fa",
+      contrastText: "#fff",
+      subText: "#6b7280",
+    },
+    white: {
+      main: "#fff",
+      dark: "#f9fafb",
+      contrastText: "#3a853d",
+    },
   },
   components: {
     MuiAlert: {
