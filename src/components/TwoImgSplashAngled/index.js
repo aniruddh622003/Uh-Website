@@ -6,7 +6,7 @@ const TwoImgSplashAngled = ({ bgsrc, heading, sub }) => {
   return (
     <Box sx={{ width: "100%" }} className={styles.cont}>
       <div className={styles.left}>
-        <img src={bgsrc} style={{ width: "130%" }} />
+        <img src={bgsrc} style={{ height: "100%" }} />
       </div>
       <div className={styles.right}>
         <Box
