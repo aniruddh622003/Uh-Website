@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { Box, Button } from "@mui/material";
 import HeadBar from "@/components/HeadBar";
 import TwoImgSplashAngled from "@/components/TwoImgSplashAngled";
+import Contact from "@/components/Contact";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         heading={"Medical services that you can trust"}
         sub={"Your health is our priority"}
       />
+      <Contact />
     </Box>
   );
 }
