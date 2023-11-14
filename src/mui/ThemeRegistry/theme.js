@@ -11,9 +11,13 @@ const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      // Greenish colors for hospital
       main: "#3a853d",
       contrastThreshold: 1,
+    },
+    secondary: {
+      main: "#1f2937",
+      contrastText: "#fff",
+      subText: "#6b7280",
     },
     white: {
       main: "#fff",
