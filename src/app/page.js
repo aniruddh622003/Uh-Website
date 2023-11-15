@@ -4,6 +4,7 @@ import { Box, Button } from "@mui/material";
 import HeadBar from "@/components/HeadBar";
 import TwoImgSplashAngled from "@/components/TwoImgSplashAngled";
 import Contact from "@/components/Contact";
+import Testimonials from "@/components/Testimonials";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         sub={"Your health is our priority"}
       />
       <Contact />
+      <Testimonials />
     </Box>
   );
 }
