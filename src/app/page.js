@@ -5,6 +5,7 @@ import HeadBar from "@/components/HeadBar";
 import TwoImgSplashAngled from "@/components/TwoImgSplashAngled";
 import Contact from "@/components/Contact";
 import Testimonials from "@/components/Testimonials";
+import Stats from "@/components/Stats";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         sub={"Your health is our priority"}
       />
       <Contact />
+      <Stats />
       <Testimonials />
     </Box>
   );

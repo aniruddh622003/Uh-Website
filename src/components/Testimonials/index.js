@@ -1,6 +1,6 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import { testimonials } from "./testtimonials";
+import { testimonials } from "../../resources/testtimonials";
 
 const Testimonials = () => {
   return (
