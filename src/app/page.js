@@ -9,6 +9,7 @@ import Stats from "@/components/Stats";
 import { FaUserDoctor } from "react-icons/fa6";
 import DeptBox from "@/components/DepartmentsBox";
 import ServCarousel from "@/components/ServiceCarousel";
+import DocCar from "@/components/DoctorCarousel";
 
 export default function Home() {
   return (
@@ -91,6 +92,7 @@ export default function Home() {
       </Box>
       <Stats />
       <Testimonials />
+      <DocCar />
     </Box>
   );
 }
