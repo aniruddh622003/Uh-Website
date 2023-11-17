@@ -20,6 +20,7 @@ const theme = createTheme({
       main: "#fff",
       dark: "#f1f4f7",
       contrastText: "#3a853d",
+      black: "#000",
     },
   },
   components: {
