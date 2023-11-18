@@ -59,7 +59,7 @@ const HeadBar = () => {
                     justifyContent: "start",
                   }}
                 >
-                  {headlinks.map((link) => (
+                  {/* {headlinks.map((link) => (
                     <ListItem
                       key={link.name}
                       disablePadding
@@ -81,7 +81,10 @@ const HeadBar = () => {
                         />
                       </ListItemButton>
                     </ListItem>
-                  ))}
+                  ))} */}
+                  <Typography variant="body2">
+                    A Leading Hospital in Raipur, C.G.
+                  </Typography>
                 </List>
               </Toolbar>
               <Box
@@ -100,7 +103,7 @@ const HeadBar = () => {
                   />
                   <Typography variant="h5">Upadhyay Hospital</Typography>
                 </Box>
-                <Box sx={{ display: "flex" }}>
+                {/* <Box sx={{ display: "flex" }}>
                   {navlinks.map((link) => (
                     <React.Fragment key={link.name}>
                       <Button
@@ -142,7 +145,7 @@ const HeadBar = () => {
                       )}
                     </React.Fragment>
                   ))}
-                </Box>
+                </Box> */}
               </Box>
             </Box>
           </Toolbar>
@@ -153,9 +156,9 @@ const HeadBar = () => {
           height: {
             xs: "45px",
             sm: "64px",
-            md: "105px",
-            lg: "105px",
-            xl: "105px",
+            md: "1px",
+            lg: "1px",
+            xl: "1px",
           },
         }}
       />

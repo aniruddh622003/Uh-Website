@@ -11,6 +11,7 @@ import DeptBox from "@/components/DepartmentsBox";
 import ServCarousel from "@/components/ServiceCarousel";
 import DocCar from "@/components/DoctorCarousel";
 import BookApp from "@/components/BookAppointment";
+import Faq from "@/components/Faq";
 
 export default function Home() {
   return (
@@ -98,6 +99,9 @@ export default function Home() {
         <Grid container spacing={2} sx={{ my: 3 }}>
           <Grid item xs={12} md={6}>
             <BookApp />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Faq />
           </Grid>
         </Grid>
       </Container>
