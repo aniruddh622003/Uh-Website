@@ -10,6 +10,7 @@ import { FaUserDoctor } from "react-icons/fa6";
 import DeptBox from "@/components/DepartmentsBox";
 import ServCarousel from "@/components/ServiceCarousel";
 import DocCar from "@/components/DoctorCarousel";
+import BookApp from "@/components/BookAppointment";
 
 export default function Home() {
   return (
@@ -93,6 +94,13 @@ export default function Home() {
       <Stats />
       <Testimonials />
       <DocCar />
+      <Container fixed>
+        <Grid container spacing={2} sx={{ my: 3 }}>
+          <Grid item xs={12} md={6}>
+            <BookApp />
+          </Grid>
+        </Grid>
+      </Container>
     </Box>
   );
 }
