@@ -24,7 +24,7 @@ export default function Home() {
       <Contact />
       <Container fixed sx={{ py: 4 }}>
         <Typography variant="h3" color="primary.light">
-          We are always Committed to You!
+          We are always Committed to You.
         </Typography>
         <Typography variant="h5" color="primary.main">
           Upadhyay Hospital aims to be the Quickest to Relieve you of your Pain
